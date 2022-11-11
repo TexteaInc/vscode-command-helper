@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 
+import { fetchData } from './fetchData';
 import helloWorld from './helloWorld';
 
 export function activate(context: vscode.ExtensionContext): void {
@@ -7,6 +8,7 @@ export function activate(context: vscode.ExtensionContext): void {
         vscode.commands.registerCommand('VSCodeExtensionBoilerplate.helloVSCode', () =>
             helloWorld(),
         ),
+        vscode.commands.registerCommand('VSCodeExtensionBoilerplate.fetchData', () => fetchData()),
     );
 }
 

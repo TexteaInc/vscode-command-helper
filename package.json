@@ -60,13 +60,18 @@
         "boilerplate"
     ],
     "activationEvents": [
-        "onCommand:VSCodeExtensionBoilerplate.helloVSCode"
+        "onCommand:VSCodeExtensionBoilerplate.helloVSCode",
+        "onCommand:VSCodeExtensionBoilerplate.fetchData"
     ],
     "contributes": {
         "commands": [
             {
                 "command": "VSCodeExtensionBoilerplate.helloVSCode",
                 "title": "Hello Visual Studio Code!"
+            },
+            {
+                "command": "VSCodeExtensionBoilerplate.fetchData",
+                "title": "Fetch Data from GitHub"
             }
         ]
     },
@@ -118,5 +123,8 @@
         "webpack-merge": "^5.8.0",
         "webpackbar": "^5.0.2",
         "yargs": "^17.6.2"
+    },
+    "dependencies": {
+        "node-fetch": "^3.3.0"
     }
 }
